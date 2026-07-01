@@ -1,4 +1,5 @@
 import csv
+import os
 import urllib.request
 import urllib.error
 from pathlib import Path
@@ -15,6 +16,7 @@ from ..feature_engineering import main as run_features
 app = FastAPI(title="Olist Data Entry Portal", version="1.0.0")
 
 DATA_DIR = Path(r"E:\Downloads\myproject")
+MAIN_API_URL = os.getenv("MAIN_API_URL", "http://127.0.0.1:8000")
 
 DATASETS = {
     "customers": {
@@ -97,11 +99,11 @@ def insert_into_db(dataset_key: str, data: Dict[str, str]):
 
 def trigger_main_api_reload():
     try:
-        req = urllib.request.Request("http://127.0.0.1:8000/reload-features", method="POST")
+        req = urllib.request.Request(f"{MAIN_API_URL}/reload-features", method="POST")
         with urllib.request.urlopen(req) as resp:
             pass
     except urllib.error.URLError:
-        # Port 8000 might not be running or reachable, ignore
+        # The main API may not be running or reachable, ignore
         pass
 
 @app.get("/", response_class=HTMLResponse)

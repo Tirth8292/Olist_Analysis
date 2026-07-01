@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: olist-main-api
+    runtime: python
+    plan: free
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn src.olist_platform.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+
+  - type: web
+    name: olist-ingestor
+    runtime: python
+    plan: free
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn src.olist_platform.api.ingestor:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: MAIN_API_URL
+        value: https://olist-main-api.onrender.com
+
+  - type: web
+    name: olist-dashboard
+    runtime: python
+    plan: free
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn src.olist_platform.api.dashboard_api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health

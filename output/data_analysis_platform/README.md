@@ -103,6 +103,26 @@ Example seller score body:
 {"seller_id": "3442f8959a84dea7ee197c632cb2df15"}
 ```
 
+## Render Deployment
+Render does not use localhost ports such as 8000, 8001, and 8002 as a single site. Instead, deploy each FastAPI app as its own Render web service.
+
+### What to deploy
+- Main API service: `src.olist_platform.api.main:app`
+- Ingestor service: `src.olist_platform.api.ingestor:app`
+- Dashboard service: `src.olist_platform.api.dashboard_api:app`
+
+### Render setup
+1. Create a new Render account and connect this repository.
+2. Create three web services from the same repo.
+3. Use these start commands:
+   - Main API: `uvicorn src.olist_platform.api.main:app --host 0.0.0.0 --port $PORT`
+   - Ingestor: `uvicorn src.olist_platform.api.ingestor:app --host 0.0.0.0 --port $PORT`
+   - Dashboard: `uvicorn src.olist_platform.api.dashboard_api:app --host 0.0.0.0 --port $PORT`
+4. Set the build command to `pip install -r requirements.txt` for each service.
+5. After deployment, set `MAIN_API_URL` in the Ingestor service to the public URL of the main API service.
+
+A ready-to-use Render config is included in `render.yaml`.
+
 ## Core Metrics
 
 - **GMV:** sum of item price plus freight.
