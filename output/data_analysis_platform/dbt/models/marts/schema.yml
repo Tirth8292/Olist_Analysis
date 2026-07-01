@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Order-level lifecycle fact table."
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+  - name: fct_order_items
+    description: "Item-level GMV and seller performance fact table."
+    columns:
+      - name: order_id
+        tests: [not_null]
+      - name: seller_id
+        tests:
+          - relationships:
+              to: ref('dim_sellers')
+              field: seller_id
+  - name: dim_products
+    columns:
+      - name: product_id
+        tests: [not_null, unique]
+

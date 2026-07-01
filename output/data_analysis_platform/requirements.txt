@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+dbt-core
+dbt-postgres
+apache-airflow
+psycopg2-binary
+python-dotenv
+

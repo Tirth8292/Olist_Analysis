@@ -1,0 +1,17 @@
+name: "olist_analytics_platform"
+version: "1.0.0"
+config-version: 2
+
+profile: "olist_analytics_platform"
+
+model-paths: ["models"]
+
+models:
+  olist_analytics_platform:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table
+
