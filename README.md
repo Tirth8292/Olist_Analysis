@@ -144,10 +144,14 @@ The Dashboard and Ingestor also provide their own UIs and live entry tooling.
 ## �️ Screenshots
 Add your web UI screenshots here to make this repo more attractive and easier to browse on GitHub.
 
-| Dashboard | API Docs | Ingestor Portal |
+| Dashboard | Ingestor Portal | API Interface |
 |---|---|---|
-| ![Dashboard screenshot](docs/dashboard.jpeg) | ![API docs screenshot](docs/api-docs.jpeg) | ![Ingestor portal screenshot](docs/ingestor.jpeg) | ![Ingestor screenshot2](docs/ingestorex.jpeg) | ![API docs screenshot2](docs/api-docsinterface.jpeg) |
+| ![Dashboard screenshot](docs/dashboard.jpeg) | ![Ingestor portal screenshot](docs/ingestor.jpeg) | ![API docs screenshot1](docs/api-docs_interface.jpeg) |
 
+ | API Docs | Ingestor Ex |
+ |---|---|
+ | ![API docs screenshot2](docs/api-docs.jpeg) | ![Ingestor screenshot2](docs/ingestor_ex.jpeg) |
+ 
 > Tip: save your screenshot files in `output/data_analysis_platform/docs/` and commit them with the repo.
 
 This will make the README visually rich in both light and dark GitHub themes.
