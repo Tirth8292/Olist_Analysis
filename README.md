@@ -142,7 +142,6 @@ The Dashboard and Ingestor also provide their own UIs and live entry tooling.
 ---
 
 ## �️ Screenshots
-Add your web UI screenshots here to make this repo more attractive and easier to browse on GitHub.
 
 | Dashboard | Ingestor Portal | API Interface |
 |---|---|---|
@@ -152,10 +151,6 @@ Add your web UI screenshots here to make this repo more attractive and easier to
  |---|---|
  | ![API docs screenshot2](docs/api-docs.jpeg) | ![Ingestor screenshot2](docs/ingestor_ex.jpeg) |
  
-> Tip: save your screenshot files in `output/data_analysis_platform/docs/` and commit them with the repo.
-
-This will make the README visually rich in both light and dark GitHub themes.
-
 ## 💡 Want the dashboard style?
 This repo already includes a polished dashboard concept and API docs, so your deployment can support both:
 - live analytics API
@@ -203,7 +198,4 @@ Recommended pages:
 - Use the Airflow DAG to schedule ingestion, dbt runs, tests, and dashboard refresh.
 - Deploy the FastAPI service behind a private endpoint for operations tooling.
 
-
-
-If you want, I can also add a small `README` section with a launch checklist and image captions for each screen.
 
