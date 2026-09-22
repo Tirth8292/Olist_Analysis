@@ -1,2 +1,0 @@
-"""Olist marketplace analytics platform."""
-

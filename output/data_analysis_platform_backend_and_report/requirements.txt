@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+psycopg2-binary
+requests
+pandas
+numpy
+scipy
+scikit-learn
+jupyter
+ipykernel
+nbformat
