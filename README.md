@@ -1,7 +1,7 @@
 # Olist Marketplace Intelligence
 
 An end-to-end analytics project for the Brazilian Olist marketplace dataset. It combines pre-joined CSV extracts, a six-step Python analysis pipeline, interactive dashboards, generated business visuals, and a CSV-backed FastAPI service.
-![Olist dashboard preview](Dashboard/Screenshot%202026-09-22%20204011.png)
+![Olist dashboard preview](Dashboard/ZebraBI/Screenshot%202026-09-22%20204011.png)
 
 ## What this project includes
 - **Joined-data analysis:** reads the existing files in `join operations/` directly. The analysis pipeline does not repeat the SQL join process.
@@ -154,7 +154,7 @@ Open the image directly: [FastAPI.jpeg](output/data_analysis_platform_backend_an
 
 | Monthly growth dashboard | Revenue trend | Category value |
 |---|---|---|
-| ![Monthly growth dashboard](Dashboard/Monthly%20Growth%20Dashboard.png) | ![Revenue line chart](Dashboard/Revenue%20Line%20Chart.png) | ![Category value bar](Dashboard/Category%20Value%20Bar.png) |
+| ![Monthly growth dashboard](Dashboard/ZebraBI/Monthly%20Growth%20Dashboard.png) | ![Revenue line chart](Dashboard/ZebraBI/Revenue%20Line%20Chart.png) | ![Category value bar](Dashboard/ZebraBI/Category%20Value%20Bar.png) |
 
 ### Analysis outputs
 
