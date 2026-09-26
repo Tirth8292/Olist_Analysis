@@ -160,7 +160,7 @@ Open the image directly: [FastAPI.jpeg](output/data_analysis_platform_backend_an
 
 | Delivery and reviews | Customer segmentation | Forecasting |
 |---|---|---|
-| [Shipping time vs review score](Data_Analysist_Concept/olist_project/outputs/figures/box_shipping_time_by_review_score.png) | [Customer segment distribution](Data_Analysist_Concept/olist_project/outputs/figures/customer_segments_distribution.png) | [Prophet forecast](Data_Analysist_Concept/olist_project/outputs/figures/prophet_forecast_vs_actual.png) |
+| [Shipping time vs review score](Data_Analysist_Concept/scripts_outputs/figures/box_shipping_time_by_review_score.png) | [Customer segment distribution](Data_Analysist_Concept/scripts_outputs/figures/customer_segments_distribution.png) | [Prophet forecast](Data_Analysist_Concept/scripts_outputs/figures/prophet_forecast_vs_actual.png) |
 
 More generated visuals are available in [Data_Analysist_Concept/olist_project/outputs/figures](Data_Analysist_Concept/olist_project/outputs/figures), including product category performance, payment behavior, delivery delay, RFM clusters, ROC curves, and correlation heatmaps.
 
@@ -168,8 +168,8 @@ More generated visuals are available in [Data_Analysist_Concept/olist_project/ou
 
 ```text
 Data Set/                                  Raw Olist CSV source files
-join operations/                           Existing pre-joined analysis extracts
-Data_Analysist_Concept/olist_project/
+join operations/                           Existing pre-joined analysis extracts    
+Data_Analysist_Concept/scripts_outputs
   scripts/                                 Six ordered analysis scripts
   src/                                     Reusable cleaning, feature, data, and chart helpers
   data/processed/                          Generated parquet datasets
